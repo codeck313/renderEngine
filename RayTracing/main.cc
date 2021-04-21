@@ -25,7 +25,8 @@ color ray_color(const ray &r, const hittable_list &world, int depth,
   }
   vec3 unit_direction = unit_vector(r.direction());
   auto t = 0.5 * (unit_direction.y() + 1.0);
-  return (1.0 - t) * color(1.0, 1.0, 1.0) + t * color(0.5, 0.7, 1.0);
+  // return (1.0 - t) * color(1.0, 1.0, 1.0) + t * color(0.5, 0.7, 1.0);
+  return (1.0 - t) * color(1.0, 1.0, 1.0) + t * color(1.0, 0.54, 0.1);
 }
 
 int main() {
@@ -36,7 +37,7 @@ int main() {
   const int image_height = static_cast<int>(image_width / aspect_ratio);
   const int samples_per_pixel = 10;
   const int max_depth = 100;
-  const double albedo = 0.35;
+  const double albedo = 0.35; // 0.35
 
   // World
   hittable_list world;
