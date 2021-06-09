@@ -3,3 +3,5 @@ tasks.json
 *.out
 *.ppm
 *.png
+*.vcd
+*.v
